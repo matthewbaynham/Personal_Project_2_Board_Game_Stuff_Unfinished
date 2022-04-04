@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>clsCheckDbStatus.h</itemPath>
+      <itemPath>clsCheckGame.h</itemPath>
+      <itemPath>clsPossiblePositions.h</itemPath>
+      <itemPath>clsSettings.h</itemPath>
+      <itemPath>modConstants.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>clsCheckDbStatus.cpp</itemPath>
+      <itemPath>clsCheckGame.cpp</itemPath>
+      <itemPath>clsPossiblePositions.cpp</itemPath>
+      <itemPath>clsSettings.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>true</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>/usr/lib64/libmysqlcppconn.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib64/libboost_system.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib64/libboost_thread.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib64/libboost_regex.so</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <packaging>
+        <packType>RPM</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+        <packInfoList>
+          <packInfoListElem name="Summary" value="Sumary..." mandatory="true"/>
+          <packInfoListElem name="Name" value="gameengine" mandatory="true"/>
+          <packInfoListElem name="Version" value="1.0" mandatory="true"/>
+          <packInfoListElem name="Release" value="1" mandatory="true"/>
+          <packInfoListElem name="Group" value="Applications/System" mandatory="true"/>
+          <packInfoListElem name="License" value="BSD-type" mandatory="true"/>
+          <packInfoListElem name="%description" value="Description..." mandatory="true"/>
+        </packInfoList>
+      </packaging>
+      <item path="clsCheckDbStatus.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="clsCheckDbStatus.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clsCheckGame.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="clsCheckGame.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clsPossiblePositions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="clsPossiblePositions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clsSettings.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="clsSettings.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="modConstants.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>true</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>/usr/lib64/libmysqlcppconn.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib64/libboost_system.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib64/libboost_thread.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib64/libboost_regex.so</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <packaging>
+        <packType>RPM</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libboost_regex.so"
+                            from="/usr/lib64/libboost_regex.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libboost_regex.so.1.54.0"
+                            from="/usr/lib64/libboost_regex.so.1.54.0"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libboost_system.so"
+                            from="/usr/lib64/libboost_system.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libboost_system.so.1.54.0"
+                            from="/usr/lib64/libboost_system.so.1.54.0"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libboost_thread.so"
+                            from="/usr/lib64/libboost_thread.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libboost_thread.so.1.54.0"
+                            from="/usr/lib64/libboost_thread.so.1.54.0"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libmysqlcppconn.so"
+                            from="/usr/lib64/libmysqlcppconn.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libmysqlcppconn.so.6"
+                            from="/usr/lib64/libmysqlcppconn.so.6"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libmysqlcppconn.so.6.1.1.2"
+                            from="/usr/lib64/libmysqlcppconn.so.6.1.1.2"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libstdc++.so.6"
+                            from="/usr/lib64/libstdc++.so.6"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}librt.so.1"
+                            from="/lib64/librt.so.1"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libpthread.so.0"
+                            from="/lib64/libpthread.so.0"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libc.so.6"
+                            from="/lib64/libc.so.6"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libdl.so.2"
+                            from="/lib64/libdl.so.2"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libgcc_s.so.1"
+                            from="/lib64/libgcc_s.so.1"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libicui18n.so.53.1"
+                            from="/lib64/libicui18n.so.53.1"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}libicuuc.so.53.1"
+                            from="/lib64/libicuuc.so.53.1"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+        <packInfoList>
+          <packInfoListElem name="Summary" value="Sumary..." mandatory="true"/>
+          <packInfoListElem name="Name" value="gameengine" mandatory="true"/>
+          <packInfoListElem name="Version" value="1.0" mandatory="true"/>
+          <packInfoListElem name="Release" value="1" mandatory="true"/>
+          <packInfoListElem name="Group" value="Applications/System" mandatory="true"/>
+          <packInfoListElem name="License" value="BSD-type" mandatory="true"/>
+          <packInfoListElem name="%description" value="Description..." mandatory="true"/>
+        </packInfoList>
+      </packaging>
+      <item path="clsCheckDbStatus.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="clsCheckDbStatus.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clsCheckGame.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="clsCheckGame.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clsPossiblePositions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="clsPossiblePositions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clsSettings.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="clsSettings.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="modConstants.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
